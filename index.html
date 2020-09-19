@@ -456,15 +456,52 @@
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
-          error consequuntur amet quis nulla. Quasi aliquam illo earum, ut
-          soluta cumque qui dolores autem repellat perspiciatis veniam delectus?
-          Id, doloremque!
-        </p>
-        <button class="modal-button" data-modal-close>Закрыть</button>
-      </div>
+      <form action="" class="modal">
+        <button class="close-button">
+          <svg class="close-icon">
+            <use href="./images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <p class="title">Оставьте свои данные, мы вам перезвоним</p>
+        <div class="form-field">
+          <label for="name" class="label">Имя</label>
+          <div class="field-wrap">
+            <svg class="field-icon">
+              <use href="./images/icons/sprite.svg#person-black"></use>
+            </svg>
+            <input type="text" name="name" id="name" class="input" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="tel" class="label">Телефон</label>
+          <div class="field-wrap">
+            <svg class="field-icon">
+              <use href="./images/icons/sprite.svg#phone-black"></use>
+            </svg>
+            <input type="tel" name="tel" id="tel" class="input" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="e-mail" class="label">Почта</label>
+          <div class="field-wrap">
+            <svg class="field-icon">
+              <use href="./images/icons/sprite.svg#email-black"></use>
+            </svg>
+            <input type="e-mail" name="e-mail" id="e-mail" class="input" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="comments" class="label">Комментарий</label>
+          <textarea
+            name="comments"
+            id="comments"
+            rows="5"
+            placeholder="Введите текст"
+            class="comments"
+          ></textarea>
+        </div>
+        <button class="submit-button" data-modal-close>Отправить</button>
+      </form>
     </div>
     <script src="./js/script.js"></script>
   </body>
