@@ -484,10 +484,10 @@
         <div class="form-field">
           <label for="e-mail" class="label">Почта</label>
           <div class="field-wrap">
+            <input type="e-mail" name="e-mail" id="e-mail" class="input" />
             <svg class="field-icon">
               <use href="./images/icons/sprite.svg#email-black"></use>
             </svg>
-            <input type="e-mail" name="e-mail" id="e-mail" class="input" />
           </div>
         </div>
         <div class="form-field">
@@ -500,7 +500,23 @@
             class="comments"
           ></textarea>
         </div>
-        <button class="submit-button" data-modal-close>Отправить</button>
+
+        <div class="custom-checkbox">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            class="checkbox"
+          />
+          <label for="checkbox" class="agreement">
+            <span>Соглашаюсь на рассылку и принимаю</span>
+            <a href="" class="agreement-link">Условия договора</a>
+          </label>
+        </div>
+
+        <div class="submit">
+          <button class="submit-button" data-modal-close>Отправить</button>
+        </div>
       </form>
     </div>
     <script src="./js/script.js"></script>
