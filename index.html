@@ -455,6 +455,10 @@
       </div>
     </footer>
 
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-checkbox"></use>
+    </svg>
+
     <div class="backdrop is-hidden" data-modal>
       <form action="" class="modal">
         <button class="close-button">
@@ -466,19 +470,19 @@
         <div class="form-field">
           <label for="name" class="label">Имя</label>
           <div class="field-wrap">
+            <input type="text" name="name" id="name" class="input" />
             <svg class="field-icon">
               <use href="./images/icons/sprite.svg#person-black"></use>
             </svg>
-            <input type="text" name="name" id="name" class="input" />
           </div>
         </div>
         <div class="form-field">
           <label for="tel" class="label">Телефон</label>
           <div class="field-wrap">
+            <input type="tel" name="tel" id="tel" class="input" />
             <svg class="field-icon">
               <use href="./images/icons/sprite.svg#phone-black"></use>
             </svg>
-            <input type="tel" name="tel" id="tel" class="input" />
           </div>
         </div>
         <div class="form-field">
@@ -502,13 +506,14 @@
         </div>
 
         <div class="custom-checkbox">
-          <input
-            type="checkbox"
-            name="checkbox"
-            id="checkbox"
-            class="checkbox"
-          />
           <label for="checkbox" class="agreement">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+              class="checkbox"
+            />
+            <span class="square"></span>
             <span>Соглашаюсь на рассылку и принимаю</span>
             <a href="" class="agreement-link">Условия договора</a>
           </label>

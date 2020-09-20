@@ -47,14 +47,14 @@ html {
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
   width: 530px;
   height: 580px;
-  padding: 15px;
+  padding: 40px;
 
   background-color: #fff;
   border-radius: 4px;
@@ -63,14 +63,15 @@ html {
 
   /* свойства анимации */
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .close-button {
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%);
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -83,8 +84,13 @@ html {
   width: 12px;
   height: 12px;
   fill: #000;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-button:hover .close-icon,
 .close-button:focus .close-icon {
   fill: var(--accent-color);
 }
@@ -115,10 +121,13 @@ html {
   left: 12px;
   transform: translateY(-50%);
   fill: var(--title-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.field-wrap:hover .field-icon,
-.field-wrap:focus ~ .field-icon {
+.input:focus + .field-icon {
   fill: var(--accent-color);
 }
 
@@ -170,20 +179,53 @@ html {
 }
 
 .agreement {
+  display: flex;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+  align-items: center;
 }
 
 .custom-checkbox {
   margin-top: 20px;
   margin-bottom: 30px;
+  margin-left: 12px;
+  align-items: center;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked + .square {
+  background-image: url(../images/icons/icon-checkbox.svg);
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
+}
+
+.square {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 1px;
+  margin-right: 8px;
 }
 
 .agreement-link {
+  margin-left: 5px;
   text-decoration: underline;
   color: var(--accent-color);
 }
@@ -197,11 +239,9 @@ html {
   padding: 0;
   border: none;
   color: var(--main-color);
-  justify-content: center;
-}
-
-.submit {
-  display: flex;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* ФОРМА ДЛЯ ПОДПИСКИ В ФУТЕРЕ */
@@ -300,9 +340,7 @@ html {
   transform: translateY(100%);
 
   /* свойства анимации */
-  /* переход-свойство */
   transition-property: transform;
-  /* переход-продолжительность */
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
