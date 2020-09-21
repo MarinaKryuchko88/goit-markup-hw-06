@@ -42,12 +42,11 @@ html {
 }
 
 .backdrop.is-hidden .modal {
-  /* top: -100%; */
   transform: translate(-50%, -50%) scale(0.1);
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -55,6 +54,10 @@ html {
   width: 530px;
   height: 580px;
   padding: 40px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   background-color: #fff;
   border-radius: 4px;
@@ -71,6 +74,8 @@ html {
   position: absolute;
   right: 8px;
   top: 8px;
+
+  padding: 0;
 
   border-radius: 50%;
   width: 30px;
@@ -134,6 +139,7 @@ html {
 .modal .form-field {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .modal .form-field:not(:last-child) {
@@ -192,8 +198,6 @@ html {
 .custom-checkbox {
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 12px;
-  align-items: center;
 }
 
 .checkbox {
@@ -239,15 +243,9 @@ html {
   padding: 0;
   border: none;
   color: var(--main-color);
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /* ФОРМА ДЛЯ ПОДПИСКИ В ФУТЕРЕ */
-.section-footer .form {
-  padding-top: 12px;
-}
 
 .mailing .appeal {
   text-transform: uppercase;
@@ -314,10 +312,6 @@ html {
   margin-left: 10px;
 }
 
-.section-footer .mailing {
-  margin-left: 93px;
-}
-
 .mailing .input-button {
   margin-top: 20px;
 }
@@ -373,26 +367,27 @@ html {
 }
 
 .our-work .description {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
 
-  color: #ffffff;
-  background-color: rgba(47, 48, 58, 0.8);
-  width: 370px;
-  height: 70px;
-
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  position: absolute;
-  bottom: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+
+  margin: 0;
 }
 
 .our-work .blok {
@@ -559,7 +554,7 @@ html {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 12px;
+
   margin-bottom: 20px;
 }
 
@@ -578,9 +573,10 @@ html {
 }
 
 .section-footer .blok-links {
-  margin-left: 70px;
   width: 206px;
-  height: 80px;
+
+  margin: 0;
+  margin-right: 93px;
 }
 
 .section-footer .social-link:hover,
@@ -724,10 +720,16 @@ html {
 .section-footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
+  align-items: baseline;
 }
 
 .section-footer .address-footer {
-  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+.section-footer .logo {
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* стр. Портфолио */
@@ -812,7 +814,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/*  */
 .list {
   list-style: none;
   margin: 0;
@@ -832,11 +833,6 @@ a {
 .address-footer,
 .links-footer .link {
   color: var(--main-color);
-
-  /* свойства анимации */
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-hero,
@@ -955,6 +951,14 @@ a {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.links-footer .contact:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.section-footer .blok-address {
+  margin-right: 70px;
 }
 
 /* страница Студия */
