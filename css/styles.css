@@ -377,8 +377,6 @@ html {
   background-color: rgba(47, 48, 58, 0.8);
   width: 100%;
   height: 70px;
-
-  margin: 0;
 }
 
 .our-work .description-text {
@@ -390,6 +388,8 @@ html {
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
+
+  margin: 0;
 }
 
 .our-work .blok {
@@ -598,7 +598,6 @@ html {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid green; */
 }
 
 /* список навигации */
@@ -635,10 +634,6 @@ html {
 .header .mail {
   margin-right: 50px;
 }
-
-/* .section {
-  outline: 1px solid green;
-} */
 
 .section-hero .container {
   flex-direction: column;
